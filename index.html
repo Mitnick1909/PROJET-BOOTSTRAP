@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>AGENCE VOYAGE</title>
+          <link rel="stylesheet" href="style.css"/>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap" rel="stylesheet">
+           <script>
+                  $('#contact-form').bootstrapValidator({
+//        live: 'disabled',
+            message: 'This value is not valid',
+            feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            Name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Name is required and cannot be empty'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required'
+                    },
+                    emailAddress: {
+                        message: 'The email address is not valid'
+                    }
+                }
+            },
+            Message: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Message is required and cannot be empty'
+                    }
+                }
+            }
+        }
+    });
+           </script>
+      </head>
+    <body>
+          <div class="container">
+                <header>
+                  
+                        <div id="menu">  <!--Debut de menu-->
+                              <div id="logo"><a href="index.html"><img src="images/Logo.png" width="120" height="120"/></a></div>
+                              <nav>
+                                    <ul>
+                                         <li><a href="">ACCUEIL</a></li>
+                                         <li><a href="">DESTINATIONS</a></li>
+                                         <li><a href="">CIRCUITS</a></li>
+                                         <li><a href="">CONTACT</a></li>
+                                    </ul>
+                              </nav>
+                        </div>
+                        <div id="cover">
+                              <img src="images/cover2.jpg" class="img-fluid"/>
+                              <div><button type="button" class="btn btn-primary" id="bouton">Contactez Nous</button></div>
+                        </div>
+                </header>
+                <hr>
+                <div id="destination">     <!--------------debut destination-->
+                     <div class="row">
+                          <div class="col-sm-12" id="titre">NOS DESTINATIONS</div>
+                     </div>
+                     <br><br>
+                          <div class="row">
+                                  <div class="col-md-4 " id="paris">
+                                         <div class="card" style="width: 25rem;">
+                                               <img src="images/paris.jpg" class="card-img-top" alt="...">
+                                               <div class="card-body">
+                                                     <h5 class="card-title">Destination USA</h5>
+                                                     <p class="card-text">Si vous souhaitez visiter l'intérieur de la Statue de la Liberté, il y a deux options : vous pouvez visiter le piédestal ou la couronne.Venez au USA</p>
+                                                     <a href="#" class="btn btn-primary">En savoir plus</a>
+                                                </div>
+                                         </div>
+                                  </div>
+                                  <div class=" col-md-4 " id="bruxelle">
+                                          <div class="card" style="width: 25rem;">
+                                                <img src="images/paris.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                     <h5 class="card-title">Destination France</h5>
+                                                     <p class="card-text">La tour Eiffel est le symbole incontournable de Paris dans le monde. Prenez un billet coupe-file et montez au sommet pour une vue spectaculaire</p>
+                                                     <a href="#" class="btn btn-primary">En savoir plus</a>
+                                                </div>
+                                          </div>
+                                  </div>
+                                  <div class="col-md-4" id="newyork">
+                                         <div class="card" style="width: 25rem;">
+                                              <img src="images/bruxelles.jpeg" class="card-img-top" alt="...">
+                                              <div class="card-body">
+                                                   <h5 class="card-title">Destination Belgique</h5>
+                                                   <p class="card-text">La capitale de la Belgique est une ville où il fait bon vivre. Ses musées, ses parcs et ses nombreux restaurants en font également un lieu de vacances idéal pour petits et grands.</p>
+                                                   <a href="#" class="btn btn-primary">En savoir plus</a>
+                                               </div>
+                                          </div>
+                                  </div>
+                  </div> 
+                     <br>                                                                <!-------------------fin de destination-->
+                     <hr>
+                     <div class="row">                                                     <!-------------debut de tarif----------->
+                        <div class="col-sm-12" id="titre">NOS FORFAITS</div>
+                        <br>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">   <!-------------debut item pour la france-->
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    France : voyage vers le pays le plus visité au monde a partir de 1.000 Euros
+                                  </button>
+                                </h2>
+                                           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                   <div class="accordion-body">Grâce à une richesse de paysages unique, des villes et des monuments incomparables et une gastronomie que l'on ne présente plus, la France compte parmi les destinations favorites des voyageurs du monde entier. A Paris, sa capitale, on ne peut qu'être subjugués par certains lieux d'exception, tels que la Tour Eiffel, le majestueux musée du Louvre ou encore la basilique du Sacré-Coeur de Montmartre. Dans le reste du pays, vous découvrirez lors de votre séjour en France que chaque région se démarque par une identité, une architecture et des spécialités uniques. De la Bretagne jusqu'au Pays Basque en passant par l'Alsace et ses influences germaniques, l'Hexagone est un condensé d'identités marquées au sein du plus vaste des pays d'Europe de l'Ouest. Evasions culturelles à Paris et dans les autres grandes villes, plages et soleil sur la Côte d'Azur ou à côté de Biarritz, la France accueille tous les profils de vacanciers !.</div>
+                                              <!-- Button trigger modal -->
+                                                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                      Afficher les details
+                                                   </button>
+    
+                                                            <!-- Modal -->
+                                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                         <div class="modal-dialog">
+                                                               <div class="modal-content">
+                                                                      <div class="modal-header">
+                                                                           <h1 class="modal-title fs-5" id="exampleModalLabel">En savoir plus</h1>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                       </div>
+                                                                       <div class="modal-body">
+                                                              
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                                                               <button type="button" class="btn btn-primary">Sauvegarder</button>
+                                                                        </div>
+                                                                </div>
+                                                         </div>
+                                                  </div>             
+                                    
+                                   </div>            <!------------------------------fIN DE ITEM POUR LA FRANCE-->
+                              </div>
+                                                     <!------------------------------dEBUT ITEM POUR LA BELGIQUE-->
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Voyage en Belgique, le pays du surréalisme a partir de 1200 Euros.
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                     <div class="accordion-body">Si un séjour en Belgique est souvent perçu comme un voyage familier, sachez que ce pays peut vous transporter dans un monde totalement différent de la France. Sa cuisine savoureuse, sa culture unique, son ambiance et son patrimoine bien préservé font de la Belgique un pays séduisant. Bien que l’on reconnaisse la Belgique grâce à sa célèbre bière et son chocolat, elle regorge d’atouts pour plaire aux visiteurs. Riche en patrimoine naturel et culturel, ce pays propose d’innombrables activités accessibles au grand public. Si proche de la France, la Belgique possède une vision assez particulière et cela se reflète dans sa capitale nommée Bruxelles. En effet, elle se distingue par sa grande place abritant des richesses architecturales comme le Manneken Pis et les gigantesques maisons des corporations. Par ailleurs, ce pays doit son ascension grâce à la contribution de nombreux personnages tels que des acteurs, des cinéastes, des écrivains, des humoristes et des footballeurs..</div>
+                                                           <!-- Button trigger modal -->
+                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                          Afficher les details
+                                         </button>
+    
+                                                            <!-- Modal -->
+                                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                                  <div class="modal-content">
+                                                                         <div class="modal-header">
+                                                                               <h1 class="modal-title fs-5" id="exampleModalLabel">En savoir plus</h1>
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                         </div>
+                                                                  <div class="modal-body">
+            
+                                                            </div>
+                                                                 <div class="modal-footer">
+                                                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                                                               <button type="button" class="btn btn-primary">Sauvegarder</button>
+                                                                 </div>
+                                                           </div>
+                                                      </div>
+                                             </div>   
+                                    
+                                    </div>
+                                                    <!------------------------------FIN ITEM POUR LA BELGIQUE-->
+                              </div>
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          USA : voyage au pays de l’Oncle Sam a partir de 1500 Dollars
+                                     </button>
+                                 </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">Pays des extrêmes, les Etats-Unis sont une destination aux mille facettes. Que vous préférez les paysages grandioses de l’Ouest américain à l’ambiance moderne et urbaine des villes de l’Est comme Boston, votre séjour aux Etats-Unis pas cher promet de belles découvertes. L’atmosphère un brin mystique de la Louisiane offre un étonnant contraste avec les grandes mégapoles qui reflètent le dynamisme culturel et financier du pays. N’hésitez pas à partir à la découverte de New York et ses innombrables musées, de La Nouvelle-Orléans et ses fêtes de Mardi Gras, ou encore des paysages époustouflants de l’Arizona. Si vous rêvez de soleil et de plage, craquez pour les spots de surf de Californie. A l’image du pays, le climat est tout aussi contrasté. Vous apprécierez la douceur de l’automne à Washington, l’hiver sur les pistes enneigées du Vermont, les belles couleurs printanières d’Hawaï..</div>
+                                        <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                          Afficher les details
+                                      </button>
+      
+                                        <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                       <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">En savoir plus</h1>
+                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                              <div class="modal-body">
+                                                               </div>
+                                                                     <div class="modal-footer">
+                                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                                                                 <button type="button" class="btn btn-primary">Sauvegarder</button>
+                                                                      </div>
+                                                              </div>
+                                                        </div>
+                                                   </div>
+                                            </div>
+                                      </div>
+                              </div>
+                                    
+                   </div> 
+                                                                                    <!---------Fin de tarif ---------------->
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-12" id="titre">NOUS CONTACTER</div>
+                </div>
+
+                <!------------------Formulaire de contact-->
+                <div class="row">
+                     <div class="col-md-6 offset-md-3">
+                          <form role="form" id="contact-form" class="contact-form">
+                               <div class="row">
+                                          <div class="col-md-6">
+                                                 <div class="form-group">
+                                                       <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Nom">
+                                                 </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                                 <div class="form-group">
+                                                       <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                                                 </div>
+                                          </div>
+                              </div>
+                              <div class="row">
+                                          <div class="col-md-12">
+                                                <div class="form-group">
+                                                      <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                                                </div>
+                                          </div>
+                              </div>
+                              <div class="row">
+                                          <div class="col-md-12">
+                                                <button type="submit" class="btn main-btn pull-right">Envoyer un message</button>
+                                          </div>
+                              </div>
+                        </form>
+                    </div>
+            </div>
+                                  <!-- Footer -->
+                                  <br><br>
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Liens utiles</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>ACCUEIL</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>DESTINATION</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CIRCUIT</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CONTACT</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Liens utiles</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>ACCUEIL</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>DESTINATION</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CIRCUIT</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CONTACT</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Liens utiles</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>ACCUEIL</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>DESTINATION</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CIRCUIT</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				<hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="https://www.nationaltransaction.com/">Moyer Agence de voyage</a></u> est basé,en Cote d'Ivoire. Abidjan 2 Plateaux</p>
+					<p class="h6">© copyrigt 2024.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">By IKTECHNOLOGY</a></p>
+				</div>
+				<hr>
+			</div>	
+		</div>
+	</section>
+	<!-- ./Footer -->
+            <div>
+                    
+            
+          
+          
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
